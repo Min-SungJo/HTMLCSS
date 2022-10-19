@@ -1,0 +1,18 @@
+table{
+    width:400px;
+}
+th{
+    background-color: gray;
+    height: 50px;
+    text-align: left;
+}
+tr{
+    background-color: whitesmoke;
+    height: 35px;
+}
+.question{
+    text-align: right;
+}
+#sub{
+    text-align: center;
+}

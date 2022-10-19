@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            background-color: whitesmoke;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-family: '나눔고딕','맑은고딕';
+        }
+        
+        /* .container div{ */
+            /* 현재 영역을 확인하기 위한 임의의 세팅 */
+            /* border: 1px solid black;
+        } */
+        a{
+            /* a태그에 파란 색 사라지게 하기 */
+            text-decoration: none;
+            color: black;
+        }
+        #item1{
+            flex-grow: 1;
+            padding: 9px;
+            margin: 5px;}
+        #item2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-grow: 2;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .second-box a:hover{
+            color: white;
+            background-color: black;
+        }
+        .second-box a{
+            padding: 9px;
+            margin: 5px;
+
+        }
+
+        #item3{
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            justify-content: flex-end;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .third-box a{
+            padding: 10px;
+            margin: 5px;
+        }
+        .third-item:hover{
+            color: yellow;
+            background-color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- container>box*3><a> -->
+    <div class="container">
+        <div class="first-box" id="item1">
+            <h2>seonzeroticket</h2>
+        </div>
+
+        <div class="second-box" id="item2">
+            <a href="#" class="second-item" id="menu">Menu</a>
+            <a href="#" class="second-item" id="best">Best</a>
+            <a href="#" class="second-item" id="event">Event</a>
+        </div>
+        
+        <div class="third-box" id="item3">
+            <a href="#" class="third-item" id="login">로그인</a>
+            <a href="#" class="third-item" id="member">회원가입</a>
+        </div>
+
+    </div>
+</body>
+</html>

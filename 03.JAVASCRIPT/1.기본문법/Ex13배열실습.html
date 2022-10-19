@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let subName =[]; // 과목명
+        let subScore =[]; // 과목점수
+        let sum=0; // 총합 저장 변수
+        let subNum=Number(prompt("과목 수를 입력해주세요")); // 테이블 열 개수
+
+        // 테이블 생성
+        // document.write("<table border='1px solid black'>")
+        document.write("<table border=1>")
+            // 과목 행
+            document.write("<tr>")
+                
+                // 과목 열, 값
+                for(var i = 0; i<subNum;i++){
+                    subName[i]=prompt("점수를 입력할 과목명을 입력해주세요");
+                    document.write("<td>"+subName[i]+"</td>")
+                }
+                document.write("<td>총합</td>")
+                document.write("<td>평균</td>")    
+            document.write("</tr>")
+                
+            // 점수 행
+            document.write("<tr>")
+                // 점수 열, 값
+                for(var i = 0; i<subNum;i++){
+                    subScore[i]=Number(prompt(subName[i]+"과목의 점수를 입력해주세요"));
+                    sum+=subScore[i];
+                    document.write("<td>"+subScore[i]+"</td>")
+                }
+                // 평균
+                // let avg=(sum/subNum).toFixed(2);
+                let avg=parseInt(sum/subNum);
+                document.write("<td>"+sum+"</td>")
+                document.write("<td>"+avg+"</td>")    
+            document.write("</tr>")
+        document.write("</table>")
+    </script>
+</body>
+</html>

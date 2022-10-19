@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 검정색 배경
+    width 120px
+    height 360px -->
+    <!-- 신호동그라미 red, yellow, green
+    width 100px
+    height 100px -->
+    <style>
+        #blackBar{
+            width: 120px;
+            height: 360px;
+            background-color: black;
+            border-radius: 20px;
+            padding-top: 10px;
+            
+        }
+        .c{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 50%;
+
+        }
+        #blackBar{
+            box-sizing: border-box;
+        }
+        #redC{
+            background-color: red;
+        }
+        #yellowC{
+            background-color: yellow;
+        }
+        #greenC{
+            background-color: green;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- 부모요소의 검정색 div -->
+    <div id="blackBar">
+        <!-- 자식요소의 div -->
+        <div class="c" id="redC"></div>
+        <div class="c" id="yellowC"></div>
+        <div class="c" id="greenC"></div>
+    </div>
+    <!--  -->
+</body>
+</html>

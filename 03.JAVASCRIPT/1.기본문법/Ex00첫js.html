@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">자바스크립트 무작정 따라하기!!!!!!!!!!!!</a>
+    <br><br>
+    <button id="btn1">디자인바꾸기 짠!</button>&nbsp&nbsp
+    <button id="btn2">되돌리기 짠!</button>
+    <br>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+    <h1>오늘은 09/13일</h1>
+    <p>즐거운 JavaScript 수업입니닷!</p>
+
+    <!-- script 태그 사이가 javascript 작성할 수 있는 영역 -->
+    <script>
+        document.querySelector("#btn1").addEventListener("click", function(){
+            //반응이 없는 오류 발생 시, f12=> 콘솔, 클릭 후 오류 위치 확인 가능
+            // 태그 이름만 쓸 때에는 기호 없이 바로 body 쓸 수 있다.
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector("body").style.color = "white";
+        })
+        document.querySelector("#btn2").addEventListener("click", function(){
+            // document.querySelector("body").style.backgroundColor = "";
+            document.querySelector("body").style.backgroundColor = "white";
+            // document.querySelector("body").style.color = "";
+            document.querySelector("body").style.color = "black";
+        })
+    </script>
+</body>
+</html>

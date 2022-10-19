@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* margin-left: 0px; 을 해도 가장 왼쪽에 붙지 않는다
+            =><body>에 default로 8px가 있기 때문이다*/
+            margin: 0px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+
+        #redBox {
+            background-color: red;
+            margin: 0px;
+        }
+
+        #blueM {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        #blueBox {
+            background-color: blue;
+            margin: 0px;
+        }
+
+        #greenBox {
+            background-color: green;
+            margin-left: 200px;
+        }
+
+        #grayBox {
+            background-color: gray;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="redBox"></div>
+    <div id="blueM">
+        <div id="blueBox"></div>
+    </div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+</body>
+
+</html>

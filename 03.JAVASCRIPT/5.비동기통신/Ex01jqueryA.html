@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="movieTB"></div>
+
+    <!-- 영화진흥위원회 오픈 API -->
+    <button onclick="req()">요청</button>
+    <script>
+        function req(){
+            $.ajax({
+                //어디로 요청할건지
+                url : "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20120101",
+                //key 값, 날짜 수정 가능(형식에 맞춰서)
+                //어떻게 요청할건지(요청방식-get/post/put/delete)
+                //속성이 여러개 들어갈 경우 ,반점으로 추가
+                //type 속성은 기본값이 get
+                type : "get",
+                //요청-응답이 성공했을 때 수행할 작업
+                success : function(data){
+                    //응답받은 데이터를 테이블 형식으로
+                    //#movieTB div영역에 출력
+                    let movieList = data.boxOfficeResult.dailyBoxOfficeList;
+                    let str = `<table border=1>`;
+                        str+=`<tr>`;
+                            str+=`<th>순위</th>`;
+                            str+=`<th>영화제목</th>`;
+                            str+=`<th>개봉일자</th>`;
+                            str+=`</tr>`;
+                    for(var i =0;i<movieList.length;i++){
+                            str+=`<tr>`;
+                                str+=`<td>${movieList[i].rank}</td>`;
+                                str+=`<td>${movieList[i].movieNm}</td>`;
+                                str+=`<td>${movieList[i].openDt}</td>`;
+                            str+=`</tr>`;
+                        }
+                    str+=`</table>`;
+                    $("#movieTB").html(str);
+                },
+                //요청-응답 실패했을 대 수행할 작업
+                error : function(){
+                    alert("실패!");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+table {
+    width: 400px;
+}
+.step{
+    background: gray;
+    height: 50px;
+    font-weight: bold;
+}
+.question{
+    background-color: whitesmoke;
+    height: 30px;
+    text-align: right;
+}
+.answer{
+    background-color: whitesmoke;
+    height: 30px;
+}
+
